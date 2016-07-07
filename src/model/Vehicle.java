@@ -11,11 +11,12 @@ public class Vehicle {
     private String registrationNumber;
     private String color;
 
-    Vehicle(VehicleType vType, String model, String manufacturer, String registrationNumber){
+    public Vehicle(VehicleType vType, String model, String manufacturer, String registrationNumber, String color){
         this.vType = vType;
         this.model = model;
         this.manufacturer = manufacturer;
         this.registrationNumber = registrationNumber;
+        this.color = color;
     }
 
     // Creating setters
