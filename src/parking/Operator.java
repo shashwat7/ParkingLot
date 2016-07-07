@@ -145,6 +145,7 @@ public class Operator extends Thread{
                     break;
                 }
                 case 5: {
+                    this.stop();
                     System.exit(0);
                 }
                 default: System.out.println("Please enter a value between 1 and 5");
