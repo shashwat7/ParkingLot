@@ -65,7 +65,7 @@ public class Main {
 
     public static void removeFromIndexes(Vehicle v, ParkingSlot p){
         // TO-DO: Check for existence and then delete
-//        idx_regNum.remove(v.getRegistrationNumber());
+        idx_regNum.remove(v.getRegistrationNumber());
         Utils.removeFromListInMap(idx_color, v.getColor(), p);
         Utils.removeFromListInMap(idx_model, v.getModel(), p);
         Utils.removeFromListInMap(idx_manufacturer, v.getManufacturer(), p);
