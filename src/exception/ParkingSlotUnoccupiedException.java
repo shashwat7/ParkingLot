@@ -1,10 +1,10 @@
-package parking;
+package exception;
 
 /**
  * Created by shashwat on 7/7/16.
  */
 public class ParkingSlotUnoccupiedException extends Exception {
-    ParkingSlotUnoccupiedException(String s){
+    public ParkingSlotUnoccupiedException(String s){
         super(s);
     }
 }
