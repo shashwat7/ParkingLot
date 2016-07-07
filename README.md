@@ -11,3 +11,9 @@ Each operator of the parking slot, must be invoked as a seperate thread. Semapho
 
 # Running instructions:
 1. Clone the repo
+2. cd ParkingLot
+3. Compile src files: javac src/exception/*.java src/model/*.java src/parking/*.java
+4. Run the main function: 
+	cd src/
+	java -cp . parking.Main [numberOfParkingSlots] [NameOfOperator]
+5. Follow the menu

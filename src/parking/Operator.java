@@ -26,9 +26,6 @@ public class Operator extends Thread{
 
     @Override
     public void run(){
-        Utils.printMenu();
-        Utils.getUserChoice(br);
-
         /*
         * Handling user input/output.
         * */
@@ -37,7 +34,7 @@ public class Operator extends Thread{
             switch (Utils.getUserChoice(br)){
                 case 1 : {
                     System.out.println("Enter the vehicle details:\n");
-                    System.out.println("[Type]|[Manufacturer]|[Model]|[RegistrationNumber]|[Color]");
+                    System.out.println("[Type],[Manufacturer],[Model],[RegistrationNumber],[Color]");
                     // TO-DO: Make things optional
                     try{
                         String in = br.readLine();
@@ -52,7 +49,6 @@ public class Operator extends Thread{
                         } else throw new ParkingFullException("No more space left in parking slot.");
                     } catch (Exception e){
                         System.out.println("Unable to park vehicle, ERROR: " + e);
-                        e.printStackTrace();
                         break;
                     }
                     finally {
@@ -76,7 +72,6 @@ public class Operator extends Thread{
                     } catch(Exception e){
                         System.out.println("Error in un-parking the vehicle.\n");
                         System.out.println("Error: " + e);
-                        e.printStackTrace();
                     } finally {
                         Main.lockOnSlots.release();
                     }
